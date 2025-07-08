@@ -1,0 +1,36 @@
+---
+description: CrawlCore (React + PixiJS) Project Rules
+globs: ["src/**/*.js", "src/**/*.ts", "src/**/*.tsx"]
+alwaysApply: true
+---
+
+### Core Architecture & React
+- Adhere strictly to the component architecture and file structure defined in the Technical Specification.
+- Structure React components logically: separate UI components (`src/components/ui`) from game-rendering components (`src/components/game`).
+- Use functional components with React Hooks. Avoid class components.
+- State management must be handled by Zustand. Create separate stores (`slices`) for distinct domains of state (e.g., `gameStore`, `metaStore`) as defined in the spec.
+- For static, non-re-rendering values or functions that need to be passed down component trees, use React Context to avoid prop-drilling.
+- Use absolute imports relative to the `src` directory for better readability and refactoring (e.g., `import { HUD } from 'components/ui/HUD'`).
+
+### PixiJS & Rendering
+- The main PixiJS application instance should be initialized and managed within a single React component (e.g., `GameCanvas.tsx`).
+- Use the PixiJS ticker (`app.ticker`) for the main game loop. Keep this loop lean; it should primarily handle rendering updates based on the current state from Zustand.
+- All game logic (e.g., combat, movement, AI) must be handled outside the render loop in dedicated system files (`src/core/systems`), which are called in a turn-based manner, not every frame.
+- Load all visual assets (spritesheets, textures) once at startup and manage them centrally. Use clear, consistent keys as defined in the Asset Naming Conventions.
+- Use PixiJS Containers to group related visual objects (e.g., a container for the player sprite and their equipment effects).
+
+### Performance & Best Practices
+- Optimize mobile performance: use texture atlases, memoize expensive React components with `React.memo`, and wrap callbacks in `useCallback` to prevent unnecessary re-renders.
+- Handle screen resizing and orientation changes gracefully. The main canvas should adapt to its container size, and the UI should be responsive (using CSS Flexbox/Grid).
+- Provide clear user feedback during asset loading. Use a dedicated loading screen component that shows progress.
+- Write clear, meaningful comments explaining *why* complex logic exists, not *what* the code is doing.
+
+### Tooling & Workflow
+- Use Cursor as the primary IDE, leveraging its AI-assisted coding, refactoring, and chat features for all development tasks.
+- Use the built-in terminal in Cursor for all Git and npm commands to maintain a consistent workflow.
+- Define and use the following npm scripts in `package.json`:
+  - `dev`: Runs the Vite development server.
+  - `build`: Creates an optimized production build.
+  - `lint`: Runs ESLint and Prettier to enforce code style.
+- Regularly update dependencies using `npm outdated` and `npm update`, and scan for security issues with `npm audit`.
+- Back up the project regularly using GitHub for version control and an optional secondary backup method.

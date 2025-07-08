@@ -1,0 +1,42 @@
+// Game constants from the GDD and Technical Specification
+
+export const DUNGEON_CONFIG = {
+  MAP_WIDTH: 80,
+  MAP_HEIGHT: 50,
+  ROOM_ATTEMPTS: 200,
+  MIN_ROOM_SIZE: 5,
+  MAX_ROOM_SIZE: 15,
+} as const;
+
+export const VIEWPORT_CONFIG = {
+  CANVAS_WIDTH: 800,
+  CANVAS_HEIGHT: 600,
+  TILE_SIZE: 32,
+  VIEWPORT_WIDTH_TILES: 25, // 800px / 32px = 25 tiles
+  VIEWPORT_HEIGHT_TILES: 18, // 600px / 32px = 18 tiles (rounded down)
+} as const;
+
+export const PLAYER_CONFIG = {
+  VISION_RADIUS: 10,
+  HUNGER_LOSS_PER_TURN: 1,
+  HUNGER_TURN_INTERVAL: 10,
+  STARVING_THRESHOLD: 100,
+  HUNGRY_THRESHOLD: 200,
+  STARVING_HP_LOSS: 1,
+  STARVING_HP_LOSS_INTERVAL: 5,
+} as const;
+
+export const COMBAT_CONFIG = {
+  BASE_TO_HIT_CHANCE: 50,
+  DEXTERITY_MULTIPLIER: 2,
+  CRITICAL_MULTIPLIER: 1.5,
+} as const;
+
+export const PROGRESSION_CONFIG = {
+  XP_BASE_MULTIPLIER: 100,
+  XP_POWER: 1.5,
+  LEVEL_UP_HP_BONUS: 10,
+  LEVEL_UP_STRENGTH_BONUS: 2,
+  LEVEL_UP_DEXTERITY_BONUS: 2,
+  LEVEL_UP_LUCK_BONUS: 1,
+} as const; 
