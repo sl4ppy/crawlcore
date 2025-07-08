@@ -26,12 +26,7 @@ export const SPRITE_DEFINITIONS: Record<string, SpriteData> = {
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
-  'player_rogue': {
-    id: 'player_rogue',
-    src: 'sprites/player_rogue.svg',
-    width: VIEWPORT_CONFIG.TILE_SIZE,
-    height: VIEWPORT_CONFIG.TILE_SIZE,
-  },
+  // 'player_rogue' omitted (no asset)
 
   // Monster sprites
   'monster_goblin': {
@@ -56,7 +51,7 @@ export const SPRITE_DEFINITIONS: Record<string, SpriteData> = {
   // Item sprites - Potions
   'item_potion_minor_health': {
     id: 'item_potion_minor_health',
-    src: 'sprites/item_potion_minor_health.svg',
+    src: 'sprites/item_potion_minor_health.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
@@ -68,7 +63,7 @@ export const SPRITE_DEFINITIONS: Record<string, SpriteData> = {
   },
   'item_potion_major_health': {
     id: 'item_potion_major_health',
-    src: 'sprites/item_potion_major_health.svg',
+    src: 'sprites/item_potion_major_health.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
@@ -80,25 +75,25 @@ export const SPRITE_DEFINITIONS: Record<string, SpriteData> = {
   },
   'item_potion_greater_strength': {
     id: 'item_potion_greater_strength',
-    src: 'sprites/item_potion_greater_strength.svg',
+    src: 'sprites/item_potion_greater_strength.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_potion_agility': {
     id: 'item_potion_agility',
-    src: 'sprites/item_potion_agility.svg',
+    src: 'sprites/item_potion_agility.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_potion_haste': {
     id: 'item_potion_haste',
-    src: 'sprites/item_potion_haste.svg',
+    src: 'sprites/item_potion_haste.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_potion_invisibility': {
     id: 'item_potion_invisibility',
-    src: 'sprites/item_potion_invisibility.svg',
+    src: 'sprites/item_potion_invisibility.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
@@ -112,37 +107,37 @@ export const SPRITE_DEFINITIONS: Record<string, SpriteData> = {
   },
   'item_scroll_teleport': {
     id: 'item_scroll_teleport',
-    src: 'sprites/item_scroll_teleport.svg',
+    src: 'sprites/item_scroll_teleport.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_scroll_magic_mapping': {
     id: 'item_scroll_magic_mapping',
-    src: 'sprites/item_scroll_magic_mapping.svg',
+    src: 'sprites/item_scroll_magic_mapping.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_scroll_remove_curse': {
     id: 'item_scroll_remove_curse',
-    src: 'sprites/item_scroll_remove_curse.svg',
+    src: 'sprites/item_scroll_remove_curse.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_scroll_enchant_weapon': {
     id: 'item_scroll_enchant_weapon',
-    src: 'sprites/item_scroll_enchant_weapon.svg',
+    src: 'sprites/item_scroll_enchant_weapon.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_scroll_enchant_armor': {
     id: 'item_scroll_enchant_armor',
-    src: 'sprites/item_scroll_enchant_armor.svg',
+    src: 'sprites/item_scroll_enchant_armor.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_scroll_fireball': {
     id: 'item_scroll_fireball',
-    src: 'sprites/item_scroll_fireball.svg',
+    src: 'sprites/item_scroll_fireball.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
@@ -150,19 +145,19 @@ export const SPRITE_DEFINITIONS: Record<string, SpriteData> = {
   // Item sprites - Weapons
   'item_dagger': {
     id: 'item_dagger',
-    src: 'sprites/item_dagger.svg',
+    src: 'sprites/item_dagger.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_club': {
     id: 'item_club',
-    src: 'sprites/item_club.svg',
+    src: 'sprites/item_club.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_staff': {
     id: 'item_staff',
-    src: 'sprites/item_staff.svg',
+    src: 'sprites/item_staff.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
@@ -174,129 +169,129 @@ export const SPRITE_DEFINITIONS: Record<string, SpriteData> = {
   },
   'item_hand_axe': {
     id: 'item_hand_axe',
-    src: 'sprites/item_hand_axe.svg',
+    src: 'sprites/item_hand_axe.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_mace': {
     id: 'item_mace',
-    src: 'sprites/item_mace.svg',
+    src: 'sprites/item_mace.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_spear': {
     id: 'item_spear',
-    src: 'sprites/item_spear.svg',
+    src: 'sprites/item_spear.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_scimitar': {
     id: 'item_scimitar',
-    src: 'sprites/item_scimitar.svg',
+    src: 'sprites/item_scimitar.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_morningstar': {
     id: 'item_morningstar',
-    src: 'sprites/item_morningstar.svg',
+    src: 'sprites/item_morningstar.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_shortbow': {
     id: 'item_shortbow',
-    src: 'sprites/item_shortbow.svg',
+    src: 'sprites/item_shortbow.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_longsword': {
     id: 'item_longsword',
-    src: 'sprites/item_longsword.svg',
+    src: 'sprites/item_longsword.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_battle_axe': {
     id: 'item_battle_axe',
-    src: 'sprites/item_battle_axe.svg',
+    src: 'sprites/item_battle_axe.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_flail': {
     id: 'item_flail',
-    src: 'sprites/item_flail.svg',
+    src: 'sprites/item_flail.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_broadsword': {
     id: 'item_broadsword',
-    src: 'sprites/item_broadsword.svg',
+    src: 'sprites/item_broadsword.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_war_hammer': {
     id: 'item_war_hammer',
-    src: 'sprites/item_war_hammer.svg',
+    src: 'sprites/item_war_hammer.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_longbow': {
     id: 'item_longbow',
-    src: 'sprites/item_longbow.svg',
+    src: 'sprites/item_longbow.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_greatsword': {
     id: 'item_greatsword',
-    src: 'sprites/item_greatsword.svg',
+    src: 'sprites/item_greatsword.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_greataxe': {
     id: 'item_greataxe',
-    src: 'sprites/item_greataxe.svg',
+    src: 'sprites/item_greataxe.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_halberd': {
     id: 'item_halberd',
-    src: 'sprites/item_halberd.svg',
+    src: 'sprites/item_halberd.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_elven_blade': {
     id: 'item_elven_blade',
-    src: 'sprites/item_elven_blade.svg',
+    src: 'sprites/item_elven_blade.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_dwarven_axe': {
     id: 'item_dwarven_axe',
-    src: 'sprites/item_dwarven_axe.svg',
+    src: 'sprites/item_dwarven_axe.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_vorpal_sword': {
     id: 'item_vorpal_sword',
-    src: 'sprites/item_vorpal_sword.svg',
+    src: 'sprites/item_vorpal_sword.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
 
-  // Item sprites - Armor
+  // Armor
   'item_padded_armor': {
     id: 'item_padded_armor',
-    src: 'sprites/item_padded_armor.svg',
+    src: 'sprites/item_padded_armor.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_robes': {
     id: 'item_robes',
-    src: 'sprites/item_robes.svg',
+    src: 'sprites/item_robes.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_buckler': {
     id: 'item_buckler',
-    src: 'sprites/item_buckler.svg',
+    src: 'sprites/item_buckler.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
@@ -308,105 +303,105 @@ export const SPRITE_DEFINITIONS: Record<string, SpriteData> = {
   },
   'item_hide_armor': {
     id: 'item_hide_armor',
-    src: 'sprites/item_hide_armor.svg',
+    src: 'sprites/item_hide_armor.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_studded_leather': {
     id: 'item_studded_leather',
-    src: 'sprites/item_studded_leather.svg',
+    src: 'sprites/item_studded_leather.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_scale_mail': {
     id: 'item_scale_mail',
-    src: 'sprites/item_scale_mail.svg',
+    src: 'sprites/item_scale_mail.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_kite_shield': {
     id: 'item_kite_shield',
-    src: 'sprites/item_kite_shield.svg',
+    src: 'sprites/item_kite_shield.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_chain_mail': {
     id: 'item_chain_mail',
-    src: 'sprites/item_chain_mail.svg',
+    src: 'sprites/item_chain_mail.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_breastplate': {
     id: 'item_breastplate',
-    src: 'sprites/item_breastplate.svg',
+    src: 'sprites/item_breastplate.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_splint_mail': {
     id: 'item_splint_mail',
-    src: 'sprites/item_splint_mail.svg',
+    src: 'sprites/item_splint_mail.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_banded_mail': {
     id: 'item_banded_mail',
-    src: 'sprites/item_banded_mail.svg',
+    src: 'sprites/item_banded_mail.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_tower_shield': {
     id: 'item_tower_shield',
-    src: 'sprites/item_tower_shield.svg',
+    src: 'sprites/item_tower_shield.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_half_plate': {
     id: 'item_half_plate',
-    src: 'sprites/item_half_plate.svg',
+    src: 'sprites/item_half_plate.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_full_plate': {
     id: 'item_full_plate',
-    src: 'sprites/item_full_plate.svg',
+    src: 'sprites/item_full_plate.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_elven_chain': {
     id: 'item_elven_chain',
-    src: 'sprites/item_elven_chain.svg',
+    src: 'sprites/item_elven_chain.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_dwarven_plate': {
     id: 'item_dwarven_plate',
-    src: 'sprites/item_dwarven_plate.svg',
+    src: 'sprites/item_dwarven_plate.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_dragon_scale': {
     id: 'item_dragon_scale',
-    src: 'sprites/item_dragon_scale.svg',
+    src: 'sprites/item_dragon_scale.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
 
-  // Item sprites - Food
+  // Food
   'item_apple': {
     id: 'item_apple',
-    src: 'sprites/item_apple.svg',
+    src: 'sprites/item_apple.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_bread': {
     id: 'item_bread',
-    src: 'sprites/item_bread.svg',
+    src: 'sprites/item_bread.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_cheese': {
     id: 'item_cheese',
-    src: 'sprites/item_cheese.svg',
+    src: 'sprites/item_cheese.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
@@ -418,13 +413,13 @@ export const SPRITE_DEFINITIONS: Record<string, SpriteData> = {
   },
   'item_iron_ration': {
     id: 'item_iron_ration',
-    src: 'sprites/item_iron_ration.svg',
+    src: 'sprites/item_iron_ration.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
   'item_lembas': {
     id: 'item_lembas',
-    src: 'sprites/item_lembas.svg',
+    src: 'sprites/item_lembas.png',
     width: VIEWPORT_CONFIG.TILE_SIZE,
     height: VIEWPORT_CONFIG.TILE_SIZE,
   },
@@ -563,18 +558,28 @@ export class SpriteSystem {
   }
 
   private async loadSprite(id: string, src: string): Promise<void> {
+    // Try PNG first, then SVG, then fallback
     return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.onload = () => {
-        this.spriteCache.set(id, img);
-        this.loadedSprites.add(id);
-        resolve();
+      const tryLoad = (exts: string[]) => {
+        if (exts.length === 0) {
+          console.warn(`Failed to load sprite: ${id} (no PNG or SVG found)`);
+          reject(new Error(`Failed to load sprite: ${id}`));
+          return;
+        }
+        const ext = exts[0];
+        const img = new Image();
+        img.onload = () => {
+          this.spriteCache.set(id, img);
+          this.loadedSprites.add(id);
+          resolve();
+        };
+        img.onerror = () => {
+          // Try next extension
+          tryLoad(exts.slice(1));
+        };
+        img.src = src.replace(/\.(png|svg)$/, `.${ext}`);
       };
-      img.onerror = () => {
-        console.warn(`Failed to load sprite: ${src}`);
-        reject(new Error(`Failed to load sprite: ${src}`));
-      };
-      img.src = src;
+      tryLoad(['png', 'svg']);
     });
   }
 
