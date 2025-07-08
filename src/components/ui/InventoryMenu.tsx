@@ -25,7 +25,7 @@ export const InventoryMenu = ({ onClose }: InventoryMenuProps): ReactElement => 
 
   if (!player) return <></>;
 
-  const { inventory, stats } = player;
+  const { inventory } = player;
   const equipmentBonuses = Player.getEquipmentBonuses(inventory);
 
   const handleUseItem = (itemId: string) => {
@@ -52,8 +52,6 @@ export const InventoryMenu = ({ onClose }: InventoryMenuProps): ReactElement => 
     completeIdentify(itemId);
     setSelectedItem(null);
   };
-
-  const selectedItemData = selectedItem ? inventory.items.find(i => i.id === selectedItem) : null;
 
   // Get rarity color for items
   const getRarityColor = (item: any) => {

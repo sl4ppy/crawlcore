@@ -5,7 +5,7 @@ import { type MonsterInstance, type MonsterStats, Monster } from '../core/entiti
 import { type ItemInstance, ITEM_TEMPLATES, Item } from '../core/entities/Item';
 import { CombatSystem } from '../core/systems/CombatSystem';
 import { ItemSystem } from '../core/systems/ItemSystem';
-import { getRandomInt, isValidPosition } from '../utils/gameHelpers';
+import { getRandomInt } from '../utils/gameHelpers';
 
 const MONSTER_TEMPLATES: MonsterStats[] = [
   {
@@ -436,7 +436,7 @@ export const useGameStore = create<GameState>((set, get) => ({
         const equipmentBonuses = Player.getEquipmentBonuses(player.inventory);
         const combatResult = CombatSystem.attack(
           { stats: monster.stats },
-          { stats: player.stats, weaponPower: equipmentBonuses.defenseBonus }
+          { stats: player.stats, armorBonus: equipmentBonuses.defenseBonus }
         );
 
         if (combatResult.hit) {
@@ -510,7 +510,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   incrementTurn: () => {
-    const { player, turnCount, messages, addMessage } = get();
+    const { player, turnCount, messages } = get();
     if (!player) return;
 
     set((state) => {
@@ -588,7 +588,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     set(state => ({
       player: state.player ? {
         ...state.player,
-        inventory: Player.removeItemFromInventory(state.player.inventory, identifyMode.scrollId)
+        inventory: Player.removeItemFromInventory(state.player.inventory, identifyMode.scrollId as string)
       } : null,
       identifyMode: { active: false, scrollId: null },
     }));
@@ -711,7 +711,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   goToNextLevel: () => {
-    const { player, dungeonLevel, dungeon, dungeons, addMessage } = get();
+    const { player, dungeonLevel, dungeon, addMessage } = get();
     if (!player || !dungeon || !dungeon.stairsDown) return;
     const nextLevel = dungeonLevel + 1;
     addMessage(`You descend to level ${nextLevel}.`);

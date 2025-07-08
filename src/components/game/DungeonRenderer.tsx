@@ -4,7 +4,6 @@ import { VIEWPORT_CONFIG } from '../../utils/constants';
 import { calculateViewportBounds } from '../../utils/viewportHelpers';
 import { SpriteRenderer } from './SpriteRenderer';
 import { spriteSystem } from '../../core/systems/SpriteSystem';
-import { useEffect, useRef, useState } from 'react';
 
 export const DungeonRenderer = (): ReactElement => {
   const { dungeon, player, monsters, items } = useGameStore();

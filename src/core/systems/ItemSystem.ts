@@ -1,4 +1,4 @@
-import { type ItemInstance, type ItemEffect } from '../entities/Item';
+import { type ItemInstance } from '../entities/Item';
 import { type PlayerStats } from '../entities/Player';
 import { getRandomInt } from '../../utils/gameHelpers';
 
@@ -64,7 +64,7 @@ export class ItemSystem {
     }
 
     // Parse healing amount (e.g., "2d4+2")
-    const healAmount = this.parseDiceExpression(effect.amount);
+    const healAmount = this.parseDiceExpression(String(effect.amount));
     const newHp = Math.min(playerStats.maxHp, playerStats.hp + healAmount);
     const actualHeal = newHp - playerStats.hp;
 
@@ -78,7 +78,7 @@ export class ItemSystem {
 
   private static useBuffItem(item: ItemInstance, playerStats: PlayerStats): ItemUsageResult {
     const effect = item.template.effect;
-    if (effect.type !== 'BUFF' || !effect.stat || !effect.amount) {
+    if (effect.type !== 'BUFF' || !effect.stat || effect.amount === undefined) {
       return {
         success: false,
         message: 'Invalid buff item.',
@@ -107,7 +107,7 @@ export class ItemSystem {
     }
 
     const currentValue = playerStats[mappedStat];
-    const newValue = currentValue + effect.amount;
+    const newValue = currentValue + Number(effect.amount);
 
     return {
       success: true,
@@ -119,7 +119,7 @@ export class ItemSystem {
 
   private static useFoodItem(item: ItemInstance, playerStats: PlayerStats): ItemUsageResult {
     const effect = item.template.effect;
-    if (effect.type !== 'RESTORE_HUNGER' || !effect.amount) {
+    if (effect.type !== 'RESTORE_HUNGER' || effect.amount === undefined) {
       return {
         success: false,
         message: 'Invalid food item.',
@@ -127,7 +127,7 @@ export class ItemSystem {
       };
     }
 
-    const newHunger = Math.min(1000, playerStats.hunger + effect.amount);
+    const newHunger = Math.min(1000, playerStats.hunger + Number(effect.amount));
     const restored = newHunger - playerStats.hunger;
 
     return {
@@ -156,7 +156,7 @@ export class ItemSystem {
       };
     }
 
-    const damageAmount = this.parseDiceExpression(effect.amount);
+    const damageAmount = this.parseDiceExpression(String(effect.amount));
     return {
       success: true,
       message: `You read ${item.template.name} and unleash ${damageAmount} damage!`,
