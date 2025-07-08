@@ -1,3 +1,5 @@
+[![Play CrawlCore on GitHub Pages](https://img.shields.io/badge/Play%20Now-GitHub%20Pages-brightgreen?style=for-the-badge)](https://sl4ppy.github.io/crawlcore/)
+
 # CrawlCore
 
 A modern browser-based roguelike game built with React, Zustand, and PixiJS.
@@ -28,7 +30,7 @@ A modern browser-based roguelike game built with React, Zustand, and PixiJS.
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/crawlcore.git
+   git clone https://github.com/sl4ppy/crawlcore.git
    cd crawlcore
    ```
 2. **Install dependencies:**
@@ -52,7 +54,7 @@ A modern browser-based roguelike game built with React, Zustand, and PixiJS.
    ```bash
    npm run deploy
    ```
-   This will publish the game to `https://YOUR_USERNAME.github.io/crawlcore/`
+   This will publish the game to `https://sl4ppy.github.io/crawlcore/`
 
 > **Note:** The `vite.config.ts` is configured for GitHub Pages with the correct `base` path.
 
